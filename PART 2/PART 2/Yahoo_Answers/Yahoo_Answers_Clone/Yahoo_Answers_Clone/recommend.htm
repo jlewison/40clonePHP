@@ -1,0 +1,107 @@
+<html> 
+<head>
+<title>You Ask It</title>
+<script language="javascript">
+<!--
+
+function reset() {
+document.tellafriend.name.value="";
+document.tellafriend.email.value="";
+document.tellafriend.friendmail1.value="";
+document.tellafriend.friendmail2.value="";
+document.tellafriend.friendmail3.value="";
+}
+
+function validate() {
+
+
+if (document.tellafriend.friendmail1.value.length==0) {
+alert("please enter your friend's email address");
+return false;
+}
+
+if (document.tellafriend.email.value.length==0) {
+alert("please enter your email address");
+return false;
+}
+if (document.tellafriend.name.value.length==0) {
+alert("please enter your name");
+return false;
+}
+
+document.tellafriend.submit()
+return true;
+}
+
+//-->
+</script>
+</head>
+<body onload="reset()" topmargin="0" leftmargin="0"> 
+<center>
+</center>
+<table width="450" cellpadding="0" cellspacing="0" align="center"> 
+<tr valign="top"> 
+<td valign="middle" align="center"> 
+<p>Complete the details below to send our link to your friends.</p> 
+<form name="tellafriend" action="tellafriend.php" method="post" onsubmit="return checkfields()"> 
+<div align="center">
+<center>
+<table border="0" cellpadding="10" cellspacing="0">
+<tr>
+<td> *your name:</td>
+<td>
+<input size="30" name="name" maxlength="45">
+</td>
+</tr>
+<tr>
+<td>*your email:</td>
+<td>
+<input size="30" name="email" maxlength="45">
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<p align="center">please enter your friend's email addresses:</td>
+</tr>
+<tr>
+<td>*email 1:</td>
+<td>
+<input size="30" name="friendmail1" maxlength="45">
+</td>
+</tr>
+<tr>
+<td>email 2:</td>
+<td>
+<input size="30" name="friendmail2" maxlength="45">
+</td>
+</tr>
+<tr>
+<td>email 3:</td>
+<td>
+<input size="30" name="friendmail3" maxlength="45">
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<p align="center">
+The email that will be sent will contain your name and email address. <br>
+<input onclick="validate();" type="button" value="click here to send">
+
+</td>
+</tr>
+</table>
+</center>
+</div>
+</form>
+</td>
+</tr> 
+<tr valign="top"> 
+<td valign="middle" align="center"> 
+&nbsp;
+</td>
+</tr> 
+</table>
+</body>
+</html> 
+
+

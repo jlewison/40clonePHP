@@ -1,0 +1,481 @@
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `answer`
+--
+
+CREATE TABLE `answer` (
+  `answerid` int(11) NOT NULL auto_increment,
+  `langid` int(1) NOT NULL default '0',
+  `answer_text` text collate latin1_general_ci NOT NULL,
+  `questionid` int(10) NOT NULL default '0',
+  `userid` int(5) NOT NULL default '0',
+  `date1` varchar(10) collate latin1_general_ci NOT NULL default '',
+  `rate` float(2,1) NOT NULL default '0.0',
+  `bestans` enum('Yes','No') collate latin1_general_ci NOT NULL default 'Yes',
+  `extra1` varchar(15) collate latin1_general_ci NOT NULL default '',
+  PRIMARY KEY  (`answerid`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci AUTO_INCREMENT=6 ;
+
+--
+-- Contenu de la table `answer`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `category`
+--
+
+CREATE TABLE `category` (
+  `categoryid` int(11) NOT NULL auto_increment,
+  `langid` int(1) NOT NULL default '0',
+  `category_name` varchar(50) collate latin1_general_ci NOT NULL default '',
+  `level` int(5) NOT NULL default '0',
+  `path` varchar(255) collate latin1_general_ci NOT NULL default '',
+  `status` enum('Active','Inactive') collate latin1_general_ci NOT NULL default 'Active',
+  `extra1` varchar(15) collate latin1_general_ci NOT NULL default '',
+  PRIMARY KEY  (`categoryid`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci AUTO_INCREMENT=34 ;
+
+--
+-- Contenu de la table `category`
+--
+
+INSERT INTO `category` VALUES(11, 1, 'Business & Finance', 0, '0', 'Active', '');
+INSERT INTO `category` VALUES(4, 1, 'subcat1', 1, '1', 'Active', '');
+INSERT INTO `category` VALUES(5, 1, 'subcatt2', 1, '2', 'Active', '');
+INSERT INTO `category` VALUES(10, 1, 'Beauty & Style', 0, '0', 'Active', '');
+INSERT INTO `category` VALUES(9, 1, 'Arts & Humanities', 0, '0', 'Active', '');
+INSERT INTO `category` VALUES(12, 1, 'Cars & Transportation', 0, '0', 'Active', '');
+INSERT INTO `category` VALUES(13, 1, 'Computers & Internet', 0, '0', 'Active', '');
+INSERT INTO `category` VALUES(14, 1, 'Consumer Electronics', 0, '0', 'Active', '');
+INSERT INTO `category` VALUES(15, 1, 'Dining Out', 0, '0', 'Active', '');
+INSERT INTO `category` VALUES(16, 1, 'Education & Reference', 0, '0', 'Active', '');
+INSERT INTO `category` VALUES(17, 1, 'Entertainment & Music', 0, '0', 'Active', '');
+INSERT INTO `category` VALUES(18, 1, 'Environment', 0, '0', 'Active', '');
+INSERT INTO `category` VALUES(19, 1, 'Family & Relationships', 0, '0', 'Active', '');
+INSERT INTO `category` VALUES(20, 1, 'Food & Drink', 0, '0', 'Active', '');
+INSERT INTO `category` VALUES(21, 1, 'Games & Recreation', 0, '0', 'Active', '');
+INSERT INTO `category` VALUES(22, 1, 'Health', 0, '0', 'Active', '');
+INSERT INTO `category` VALUES(23, 1, 'Home & Garden', 0, '0', 'Active', '');
+INSERT INTO `category` VALUES(24, 1, 'Local Businesses', 0, '0', 'Active', '');
+INSERT INTO `category` VALUES(25, 1, 'News & Events', 0, '0', 'Active', '');
+INSERT INTO `category` VALUES(26, 1, 'Pets', 0, '0', 'Active', '');
+INSERT INTO `category` VALUES(27, 1, 'Politics & Government', 0, '0', 'Active', '');
+INSERT INTO `category` VALUES(28, 1, 'Pregnancy & Parenting', 0, '0', 'Active', '');
+INSERT INTO `category` VALUES(29, 1, 'Science & Mathematics', 0, '0', 'Active', '');
+INSERT INTO `category` VALUES(30, 1, 'Social Science', 0, '0', 'Active', '');
+INSERT INTO `category` VALUES(31, 1, 'Society & Culture', 0, '0', 'Active', '');
+INSERT INTO `category` VALUES(32, 1, 'Sports', 0, '0', 'Active', '');
+INSERT INTO `category` VALUES(33, 1, 'Travel', 0, '0', 'Active', '');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `country`
+--
+
+CREATE TABLE `country` (
+  `countryid` int(11) NOT NULL auto_increment,
+  `countryname` varchar(100) collate latin1_general_ci NOT NULL default '',
+  `countrycode` varchar(10) collate latin1_general_ci NOT NULL default '0',
+  `extra1` varchar(255) collate latin1_general_ci NOT NULL default '',
+  PRIMARY KEY  (`countryid`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci AUTO_INCREMENT=247 ;
+
+--
+-- Contenu de la table `country`
+--
+
+INSERT INTO `country` VALUES(45, 'CAPE VERDE', 'CV', '');
+INSERT INTO `country` VALUES(11, 'ANGOLA', 'AO', '');
+INSERT INTO `country` VALUES(10, 'ANDORRA', 'AD', '');
+INSERT INTO `country` VALUES(8, 'ALBANIA', 'AL', '');
+INSERT INTO `country` VALUES(9, 'ALGERIA', 'DZ', '');
+INSERT INTO `country` VALUES(12, 'ANGUILLA', 'AI', '');
+INSERT INTO `country` VALUES(13, 'ANTARCTICA', 'AQ', '');
+INSERT INTO `country` VALUES(14, 'ANTIGUA AND BARBUDA', 'AG', '');
+INSERT INTO `country` VALUES(15, 'ARGENTINA REPUBLIC', 'AR', '');
+INSERT INTO `country` VALUES(16, 'ARMENIA', 'AM', '');
+INSERT INTO `country` VALUES(17, 'ARUBA', 'AW', '');
+INSERT INTO `country` VALUES(18, 'AUSTRALIA', 'AU', '');
+INSERT INTO `country` VALUES(19, 'AUSTRIA', 'AT', '');
+INSERT INTO `country` VALUES(20, 'AZERBAIJAN', 'AZ', '');
+INSERT INTO `country` VALUES(21, 'BAHAMAS', 'BS', '');
+INSERT INTO `country` VALUES(22, 'BAHRAIN', 'BH', '');
+INSERT INTO `country` VALUES(23, 'BANGLADESH', 'BD', '');
+INSERT INTO `country` VALUES(24, 'BARBADOS', 'BB', '');
+INSERT INTO `country` VALUES(25, 'BELARUS', 'BY', '');
+INSERT INTO `country` VALUES(26, 'BELGIUM', 'BE', '');
+INSERT INTO `country` VALUES(27, 'BELIZE', 'BZ', '');
+INSERT INTO `country` VALUES(28, 'BENIN', 'BJ', '');
+INSERT INTO `country` VALUES(29, 'BERMUDA', 'BM', '');
+INSERT INTO `country` VALUES(30, 'BHUTAN', 'BT', '');
+INSERT INTO `country` VALUES(31, 'BOLIVIA', 'BO', '');
+INSERT INTO `country` VALUES(32, 'BOSNIA AND HERZEGOVINA', 'BA', '');
+INSERT INTO `country` VALUES(33, 'BOTSWANA', 'BW', '');
+INSERT INTO `country` VALUES(34, 'BOUVET ISLAND', 'BV', '');
+INSERT INTO `country` VALUES(35, 'BRAZIL', 'BR', '');
+INSERT INTO `country` VALUES(36, 'BRITISH INDIAN OCEAN TERR', 'IO', '');
+INSERT INTO `country` VALUES(37, 'BRITISH VIRGIN ISLANDS', 'VG', '');
+INSERT INTO `country` VALUES(38, 'BRUNEI DARUSSALAM', 'BN', '');
+INSERT INTO `country` VALUES(39, 'BULGARIA', 'BG', '');
+INSERT INTO `country` VALUES(40, 'BURKINA FASO', 'BF', '');
+INSERT INTO `country` VALUES(41, 'BURUNDI', 'BI', '');
+INSERT INTO `country` VALUES(42, 'CAMBODIA', 'KH', '');
+INSERT INTO `country` VALUES(43, 'CAMEROON', 'CM', '');
+INSERT INTO `country` VALUES(44, 'CANADA', 'CA', '');
+INSERT INTO `country` VALUES(46, 'CAYMAN ISLANDS', 'KY', '');
+INSERT INTO `country` VALUES(47, 'CENTRAL AFRICAN REPUBLIC', 'CF', '');
+INSERT INTO `country` VALUES(48, 'CHAD', 'TD', '');
+INSERT INTO `country` VALUES(49, 'CHILE', 'CL', '');
+INSERT INTO `country` VALUES(50, 'CHINA', 'CN', '');
+INSERT INTO `country` VALUES(51, 'CHRISTMAS ISLANDS', 'CX', '');
+INSERT INTO `country` VALUES(52, 'COCOS ISLANDS', 'CC', '');
+INSERT INTO `country` VALUES(53, 'COLOMBIA', 'CO', '');
+INSERT INTO `country` VALUES(54, 'COMORAS', 'KM', '');
+INSERT INTO `country` VALUES(55, 'CONGO', 'CG', '');
+INSERT INTO `country` VALUES(56, 'COOK ISLANDS', 'CK', '');
+INSERT INTO `country` VALUES(57, 'COSTA RICA', 'CR', '');
+INSERT INTO `country` VALUES(58, 'COTE D IVOIRE', 'CI', '');
+INSERT INTO `country` VALUES(59, 'CROATIA', 'HR', '');
+INSERT INTO `country` VALUES(60, 'CUBA', 'CU', '');
+INSERT INTO `country` VALUES(61, 'CYPRUS', 'CY', '');
+INSERT INTO `country` VALUES(62, 'CZECH REPUBLIC', 'CZ', '');
+INSERT INTO `country` VALUES(63, 'DENMARK', 'DK', '');
+INSERT INTO `country` VALUES(64, 'DJIBOUTI', 'DJ', '');
+INSERT INTO `country` VALUES(65, 'DOMINICA', 'DM', '');
+INSERT INTO `country` VALUES(66, 'DOMINICAN REPUBLIC', 'DO', '');
+INSERT INTO `country` VALUES(67, 'EAST TIMOR', 'TP', '');
+INSERT INTO `country` VALUES(68, 'ECUADOR', 'EC', '');
+INSERT INTO `country` VALUES(69, 'EGYPT', 'EG', '');
+INSERT INTO `country` VALUES(70, 'EL SALVADOR', 'SV', '');
+INSERT INTO `country` VALUES(71, 'EQUATORIAL GUINEA', 'GQ', '');
+INSERT INTO `country` VALUES(72, 'ESTONIA', 'EE', '');
+INSERT INTO `country` VALUES(73, 'ETHIOPIA', 'ET', '');
+INSERT INTO `country` VALUES(74, 'FALKLAND ISLANDS', 'FK', '');
+INSERT INTO `country` VALUES(75, 'FAROE ISLANDS', 'FO', '');
+INSERT INTO `country` VALUES(76, 'FIJI', 'FJ', '');
+INSERT INTO `country` VALUES(77, 'FINLAND', 'FI', '');
+INSERT INTO `country` VALUES(78, 'FINLAND', 'FR', '');
+INSERT INTO `country` VALUES(79, 'FRANCE METROPOLITAN', 'FX', '');
+INSERT INTO `country` VALUES(80, 'FRENCH GUIANA', 'GF', '');
+INSERT INTO `country` VALUES(81, 'FRENCH POLYNESIA', 'PF', '');
+INSERT INTO `country` VALUES(82, 'FRENCH SOUTHERN TERRITORIES', 'TF', '');
+INSERT INTO `country` VALUES(83, 'GABON', 'GA', '');
+INSERT INTO `country` VALUES(84, 'GAMBIA', 'GM', '');
+INSERT INTO `country` VALUES(85, 'GEORGIA', 'GE', '');
+INSERT INTO `country` VALUES(86, 'GERMANY', 'DE', '');
+INSERT INTO `country` VALUES(87, 'GHANA', 'GH', '');
+INSERT INTO `country` VALUES(88, 'GIBRALTER', 'GI', '');
+INSERT INTO `country` VALUES(89, 'GREECE', 'GR', '');
+INSERT INTO `country` VALUES(90, 'GREENLAND', 'GL', '');
+INSERT INTO `country` VALUES(91, 'GRENADA', 'GD', '');
+INSERT INTO `country` VALUES(92, 'GUADELOUPE', 'GP', '');
+INSERT INTO `country` VALUES(93, 'GUAM', 'GU', '');
+INSERT INTO `country` VALUES(94, 'GUATEMALA', 'GT', '');
+INSERT INTO `country` VALUES(95, 'GUINEA', 'GN', '');
+INSERT INTO `country` VALUES(96, 'GUINEA-BISSAU', 'GW', '');
+INSERT INTO `country` VALUES(97, 'GUYANA', 'GY', '');
+INSERT INTO `country` VALUES(98, 'HAITI', 'HT', '');
+INSERT INTO `country` VALUES(99, 'HEARD & MCDONALD ISLAND', 'HM', '');
+INSERT INTO `country` VALUES(100, 'HONDURAS', 'HN', '');
+INSERT INTO `country` VALUES(101, 'HONG KONG', 'HK', '');
+INSERT INTO `country` VALUES(102, 'HUNGARY', 'HU', '');
+INSERT INTO `country` VALUES(103, 'ICELAND', 'IS', '');
+INSERT INTO `country` VALUES(104, 'INDIA', 'IN', '');
+INSERT INTO `country` VALUES(105, 'INDONESIA', 'ID', '');
+INSERT INTO `country` VALUES(106, 'IRAN, ISLAMIC REPUBLIC OF', 'IR', '');
+INSERT INTO `country` VALUES(107, 'IRAQ', 'IQ', '');
+INSERT INTO `country` VALUES(108, 'IRELAND', 'IE', '');
+INSERT INTO `country` VALUES(109, 'ISRAEL', 'IL', '');
+INSERT INTO `country` VALUES(110, 'ITALY', 'IT', '');
+INSERT INTO `country` VALUES(111, 'JAMAICA', 'JM', '');
+INSERT INTO `country` VALUES(112, 'JAPAN', 'JP', '');
+INSERT INTO `country` VALUES(113, 'JORDAN', 'JO', '');
+INSERT INTO `country` VALUES(114, 'KAZAKHSTAN', 'KZ', '');
+INSERT INTO `country` VALUES(115, 'KENYA', 'KE', '');
+INSERT INTO `country` VALUES(116, 'KIRIBATI', 'KI', '');
+INSERT INTO `country` VALUES(117, 'KOREA, DEM. PEOPLES REP OF', 'KP', '');
+INSERT INTO `country` VALUES(118, 'KOREA, REPUBLIC OF', 'KR', '');
+INSERT INTO `country` VALUES(119, 'KUWAIT', 'KW', '');
+INSERT INTO `country` VALUES(120, 'KYRGYZSTAN', 'KG', '');
+INSERT INTO `country` VALUES(121, 'LAO PEOPLE''S DEM. REPUBLIC', 'LA', '');
+INSERT INTO `country` VALUES(122, 'LATVIA', 'LV', '');
+INSERT INTO `country` VALUES(123, 'LEBANON', 'LB', '');
+INSERT INTO `country` VALUES(124, 'LESOTHO', 'LS', '');
+INSERT INTO `country` VALUES(125, 'LIBERIA', 'LR', '');
+INSERT INTO `country` VALUES(126, 'LIBYAN ARAB JAMAHIRIYA', 'LY', '');
+INSERT INTO `country` VALUES(127, 'LIECHTENSTEIN', 'LI', '');
+INSERT INTO `country` VALUES(128, 'LITHUANIA', 'LT', '');
+INSERT INTO `country` VALUES(129, 'LUXEMBOURG', 'LU', '');
+INSERT INTO `country` VALUES(130, 'MACAO', 'MO', '');
+INSERT INTO `country` VALUES(131, 'MACEDONIA', 'MK', '');
+INSERT INTO `country` VALUES(132, 'MADAGASCAR', 'MG', '');
+INSERT INTO `country` VALUES(133, 'MALAWI', 'MW', '');
+INSERT INTO `country` VALUES(134, 'MALAYSIA', 'MY', '');
+INSERT INTO `country` VALUES(135, 'MALDIVES', 'MV', '');
+INSERT INTO `country` VALUES(136, 'MALI', 'ML', '');
+INSERT INTO `country` VALUES(137, 'MALTA', 'MT', '');
+INSERT INTO `country` VALUES(138, 'MARSHALL ISLANDS', 'MH', '');
+INSERT INTO `country` VALUES(139, 'MARTINIQUE', 'MQ', '');
+INSERT INTO `country` VALUES(140, 'MAURITANIA', 'MR', '');
+INSERT INTO `country` VALUES(141, 'MAURITIUS', 'MU', '');
+INSERT INTO `country` VALUES(142, 'MAYOTTE', 'YT', '');
+INSERT INTO `country` VALUES(143, 'MEXICO', 'MX', '');
+INSERT INTO `country` VALUES(144, 'MICRONESIA', 'FM', '');
+INSERT INTO `country` VALUES(145, 'MOLDAVA REPUBLIC OF', 'MD', '');
+INSERT INTO `country` VALUES(146, 'MONACO', 'MC', '');
+INSERT INTO `country` VALUES(147, 'MONGOLIA', 'MN', '');
+INSERT INTO `country` VALUES(148, 'MONTENEGRO', 'ME', '');
+INSERT INTO `country` VALUES(149, 'MONTSERRAT', 'MS', '');
+INSERT INTO `country` VALUES(150, 'MOROCCO', 'MA', '');
+INSERT INTO `country` VALUES(151, 'MOZAMBIQUE', 'MZ', '');
+INSERT INTO `country` VALUES(152, 'MYANMAR', 'MM', '');
+INSERT INTO `country` VALUES(153, 'NAMIBIA', 'NA', '');
+INSERT INTO `country` VALUES(154, 'NAURU', 'NR', '');
+INSERT INTO `country` VALUES(155, 'NEPAL', 'NP', '');
+INSERT INTO `country` VALUES(156, 'NETHERLANDS ANTILLES', 'AN', '');
+INSERT INTO `country` VALUES(157, 'NETHERLANDS, THE', 'NL', '');
+INSERT INTO `country` VALUES(158, 'NEW CALEDONIA', 'NC', '');
+INSERT INTO `country` VALUES(159, 'NEW ZEALAND', 'NZ', '');
+INSERT INTO `country` VALUES(160, 'NICARAGUA', 'NI', '');
+INSERT INTO `country` VALUES(161, 'NIGER', 'NE', '');
+INSERT INTO `country` VALUES(162, 'NIGERIA', 'NG', '');
+INSERT INTO `country` VALUES(163, 'NIUE', 'NU', '');
+INSERT INTO `country` VALUES(164, 'NORFOLK ISLAND', 'NF', '');
+INSERT INTO `country` VALUES(165, 'NORTHERN MARIANA ISLANDS', 'MP', '');
+INSERT INTO `country` VALUES(166, 'NORWAY', 'NO', '');
+INSERT INTO `country` VALUES(167, 'OMAN', 'OM', '');
+INSERT INTO `country` VALUES(168, 'PAKISTAN', 'PK', '');
+INSERT INTO `country` VALUES(169, 'PALAU', 'PW', '');
+INSERT INTO `country` VALUES(170, 'PANAMA', 'PA', '');
+INSERT INTO `country` VALUES(171, 'PAPUA NEW GUINEA', 'PG', '');
+INSERT INTO `country` VALUES(172, 'PARAGUAY', 'PY', '');
+INSERT INTO `country` VALUES(173, 'PARAGUAY', 'PE', '');
+INSERT INTO `country` VALUES(174, 'PHILLIPINES', 'PH', '');
+INSERT INTO `country` VALUES(175, 'PITCAIRN', 'PN', '');
+INSERT INTO `country` VALUES(176, 'POLAND', 'PL', '');
+INSERT INTO `country` VALUES(177, 'PORTUGAL', 'PT', '');
+INSERT INTO `country` VALUES(178, 'PUERTO RICO', 'PR', '');
+INSERT INTO `country` VALUES(179, 'QATAR', 'QA', '');
+INSERT INTO `country` VALUES(180, 'REUNION', 'RE', '');
+INSERT INTO `country` VALUES(181, 'ROMANIA', 'RO', '');
+INSERT INTO `country` VALUES(182, 'RUSSIAN FEDERATION', 'RU', '');
+INSERT INTO `country` VALUES(183, 'RWANDA', 'RW', '');
+INSERT INTO `country` VALUES(184, 'SAMOA', 'WS', '');
+INSERT INTO `country` VALUES(185, 'SAN MARINO', 'SM', '');
+INSERT INTO `country` VALUES(186, 'SAO TOME/PRINCIPE', 'ST', '');
+INSERT INTO `country` VALUES(187, 'SAUDI ARABIA', 'SA', '');
+INSERT INTO `country` VALUES(188, 'SENEGAL', 'SN', '');
+INSERT INTO `country` VALUES(189, 'SERBIA', 'SP', '');
+INSERT INTO `country` VALUES(190, 'SEYCHELLES', 'SC', '');
+INSERT INTO `country` VALUES(191, 'SIERRA LEONE', 'SL', '');
+INSERT INTO `country` VALUES(192, 'SINGAPORE', 'SG', '');
+INSERT INTO `country` VALUES(193, 'SLOVAKIA', 'SK', '');
+INSERT INTO `country` VALUES(194, 'SLOVENIA', 'SI', '');
+INSERT INTO `country` VALUES(195, 'SOLOMON ISLANDS', 'SB', '');
+INSERT INTO `country` VALUES(196, 'SOMALIA', 'SO', '');
+INSERT INTO `country` VALUES(197, 'SOMOA,GILBERT,ELLICE ISLANDS', 'AS', '');
+INSERT INTO `country` VALUES(198, 'SOUTH AFRICA', 'ZA', '');
+INSERT INTO `country` VALUES(199, 'SPAIN', 'ES', '');
+INSERT INTO `country` VALUES(200, 'SRI LANKA', 'LK', '');
+INSERT INTO `country` VALUES(201, 'ST. HELENA', 'SH', '');
+INSERT INTO `country` VALUES(202, 'ST. KITTS AND NEVIS', 'KN', '');
+INSERT INTO `country` VALUES(204, 'ST. LUCIA', 'LC', '');
+INSERT INTO `country` VALUES(205, 'ST. PIERRE AND MIQUELON', 'PM', '');
+INSERT INTO `country` VALUES(206, 'ST. VINCENT & THE GRENADINES', 'VC', '');
+INSERT INTO `country` VALUES(207, 'SUDAN', 'SD', '');
+INSERT INTO `country` VALUES(208, 'SURINAME', 'SR', '');
+INSERT INTO `country` VALUES(209, 'SVALBARD AND JAN MAYEN', 'SJ', '');
+INSERT INTO `country` VALUES(210, 'SWAZILAND', 'SZ', '');
+INSERT INTO `country` VALUES(211, 'SWEDEN', 'SE', '');
+INSERT INTO `country` VALUES(212, 'SWITZERLAND', 'CH', '');
+INSERT INTO `country` VALUES(213, 'SYRIAN ARAB REPUBLIC', 'SY', '');
+INSERT INTO `country` VALUES(214, 'TAIWAN', 'TW', '');
+INSERT INTO `country` VALUES(215, 'TAJIKISTAN', 'TJ', '');
+INSERT INTO `country` VALUES(216, 'TANZANIA, UNITED REPUBLIC OF', 'TZ', '');
+INSERT INTO `country` VALUES(217, 'THAILAND', 'TH', '');
+INSERT INTO `country` VALUES(218, 'TOGO', 'TG', '');
+INSERT INTO `country` VALUES(219, 'TOKELAU', 'TK', '');
+INSERT INTO `country` VALUES(220, 'TONGA', 'TO', '');
+INSERT INTO `country` VALUES(221, 'TRINIDAD AND TOBAGO', 'TT', '');
+INSERT INTO `country` VALUES(222, 'TUNISIA', 'TN', '');
+INSERT INTO `country` VALUES(223, 'TURKEY', 'TR', '');
+INSERT INTO `country` VALUES(224, 'TURKMENISTAN', 'TM', '');
+INSERT INTO `country` VALUES(225, 'TURKS AND CALCOS ISLANDS', 'TC', '');
+INSERT INTO `country` VALUES(226, 'TUVALU', 'TV', '');
+INSERT INTO `country` VALUES(227, 'UGANDA', 'UG', '');
+INSERT INTO `country` VALUES(228, 'UKRAINE', 'UA', '');
+INSERT INTO `country` VALUES(229, 'UNITED ARAB EMIRATES', 'AE', '');
+INSERT INTO `country` VALUES(230, 'UNITED KINGDOM', 'GB', '');
+INSERT INTO `country` VALUES(231, 'UNITED STATES', 'US', '');
+INSERT INTO `country` VALUES(232, 'UNITED STATES MINOR OUTL.IS.', 'UM', '');
+INSERT INTO `country` VALUES(233, 'URUGUAY', 'UY', '');
+INSERT INTO `country` VALUES(234, 'UZBEKISTAN', 'UZ', '');
+INSERT INTO `country` VALUES(235, 'VANUATU', 'VU', '');
+INSERT INTO `country` VALUES(236, 'VATICAN CITY STATE', 'VA', '');
+INSERT INTO `country` VALUES(237, 'VENEZUELA', 'VE', '');
+INSERT INTO `country` VALUES(238, 'VIET NAM', 'VN', '');
+INSERT INTO `country` VALUES(239, 'VIRGIN ISLANDS (USA)', 'VI', '');
+INSERT INTO `country` VALUES(240, 'WALLIS AND FUTUNA ISLANDS', 'WF', '');
+INSERT INTO `country` VALUES(241, 'WESTERN SAHARA', 'EH', '');
+INSERT INTO `country` VALUES(242, 'YEMEN', 'YE', '');
+INSERT INTO `country` VALUES(243, 'YUGOSLAVIA', 'YU', '');
+INSERT INTO `country` VALUES(244, 'ZAIRE', 'ZR', '');
+INSERT INTO `country` VALUES(245, 'ZAMBIA', 'ZM', '');
+INSERT INTO `country` VALUES(246, 'ZIMBABWE', 'ZW', '');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `filter`
+--
+
+CREATE TABLE `filter` (
+  `filterid` int(11) NOT NULL auto_increment,
+  `word` varchar(20) collate latin1_general_ci NOT NULL default '',
+  `extra1` varchar(15) collate latin1_general_ci NOT NULL default '',
+  PRIMARY KEY  (`filterid`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci AUTO_INCREMENT=6 ;
+
+--
+-- Contenu de la table `filter`
+--
+
+INSERT INTO `filter` VALUES(5, 'blowjob', '');
+INSERT INTO `filter` VALUES(4, 'viagra', '');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `language`
+--
+
+CREATE TABLE `language` (
+  `languageid` int(11) NOT NULL auto_increment,
+  `language_name` varchar(15) collate latin1_general_ci NOT NULL default '',
+  `status` enum('Active','Inactive') collate latin1_general_ci NOT NULL default 'Active',
+  `extra1` varchar(15) collate latin1_general_ci NOT NULL default '',
+  PRIMARY KEY  (`languageid`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci AUTO_INCREMENT=3 ;
+
+--
+-- Contenu de la table `language`
+--
+
+INSERT INTO `language` VALUES(1, 'English', 'Active', '');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `question`
+--
+
+CREATE TABLE `question` (
+  `questionid` int(11) NOT NULL auto_increment,
+  `langid` int(1) NOT NULL default '0',
+  `question_text` text collate latin1_general_ci NOT NULL,
+  `userid` int(10) NOT NULL default '0',
+  `categoryid` int(5) NOT NULL default '0',
+  `title` varchar(50) collate latin1_general_ci default NULL,
+  `date1` varchar(10) collate latin1_general_ci NOT NULL default '',
+  `status` enum('Active','Inactive') collate latin1_general_ci NOT NULL default 'Active',
+  `abuse` enum('Yes','No') collate latin1_general_ci NOT NULL default 'Yes',
+  `rate` int(1) NOT NULL default '1',
+  PRIMARY KEY  (`questionid`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci AUTO_INCREMENT=55 ;
+
+--
+-- Contenu de la table `question`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `rating`
+--
+
+CREATE TABLE `rating` (
+  `ratingid` int(10) NOT NULL auto_increment,
+  `ratingdate` varchar(15) NOT NULL default '',
+  `ipaddress` varchar(15) NOT NULL default '',
+  `albumid` int(5) NOT NULL default '0',
+  `rate` int(1) NOT NULL default '0',
+  `extra1` varchar(10) NOT NULL default '',
+  PRIMARY KEY  (`ratingid`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=69 ;
+
+
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `settings`
+--
+
+CREATE TABLE `settings` (
+  `settingsid` int(11) NOT NULL auto_increment,
+  `title` varchar(20) collate latin1_general_ci NOT NULL default '',
+  `value` varchar(25) collate latin1_general_ci NOT NULL default '',
+  `key` varchar(15) collate latin1_general_ci NOT NULL default '',
+  `extra1` varchar(15) collate latin1_general_ci NOT NULL default '',
+  PRIMARY KEY  (`settingsid`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci AUTO_INCREMENT=1 ;
+
+--
+-- Contenu de la table `settings`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `user`
+--
+
+CREATE TABLE `user` (
+  `userid` int(11) NOT NULL auto_increment,
+  `langid` int(1) NOT NULL default '0',
+  `username` varchar(50) collate latin1_general_ci NOT NULL default '',
+  `first_name` varchar(25) collate latin1_general_ci NOT NULL default '',
+  `last_name` varchar(25) collate latin1_general_ci NOT NULL default '',
+  `emailid` varchar(50) collate latin1_general_ci NOT NULL default '',
+  `photo` varchar(50) collate latin1_general_ci NOT NULL default '',
+  `status` enum('Active','Inactive') collate latin1_general_ci NOT NULL default 'Active',
+  `password` varchar(25) collate latin1_general_ci NOT NULL default '',
+  `city` varchar(50) collate latin1_general_ci NOT NULL default '',
+  `state` varchar(50) collate latin1_general_ci NOT NULL default '',
+  `countryid` int(3) NOT NULL default '0',
+  `address` text collate latin1_general_ci NOT NULL,
+  `zipcode` int(11) NOT NULL default '0',
+  PRIMARY KEY  (`userid`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci AUTO_INCREMENT=8 ;
+
+--
+-- Contenu de la table `user`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `watchlist`
+--
+
+CREATE TABLE `watchlist` (
+  `watchlistid` int(11) NOT NULL auto_increment,
+  `userid` int(5) NOT NULL default '0',
+  `questionid` int(5) NOT NULL default '0',
+  `extra1` varchar(15) collate latin1_general_ci NOT NULL default '',
+  PRIMARY KEY  (`watchlistid`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci AUTO_INCREMENT=1 ;
+
+--
+-- Contenu de la table `watchlist`
+--
+

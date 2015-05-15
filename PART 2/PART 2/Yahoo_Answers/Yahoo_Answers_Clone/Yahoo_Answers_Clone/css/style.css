@@ -1,0 +1,42 @@
+body {margin:0; padding:0; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:10px; color:#666666}
+
+p {margin:5px 0px}
+form {margin:0; padding:0}
+img {border:0px none}
+a {color:#666666; text-decoration:underline}
+a:hover {color:#000000; text-decoration:underline}
+
+.MainTable {width:780px; border-collapse:collapse; background:#FFFFFF}
+
+.Header {background:url(images/headerBg1.jpg) left top no-repeat; border-bottom:1px solid #9CA3A5; height:102px}
+.Header1 {border-bottom:1px solid #9CA3A5; height:102px}
+
+.ColLt1 {width:200px; background:#E7E7E7; padding:2px 0 0 0}
+.ColCnt1 {padding:2px 0 0 0}
+
+.ColLt1 p {font-size:11px; color:#333333; margin:5px 10px}
+.ColLt1 p a {color:#333333; text-decoration:none}
+.ColLt1 p a:hover {color:#E33A00; text-decoration:none}
+
+.HdText1 {font-size:11px; font-weight:bold; color:#333333; background:#FFFFFF; padding:5px 10px; border-top:1px solid #9B9B9B; border-bottom:1px solid #9B9B9B}
+.HdText2 {font-size:11px; font-weight:bold; color:#666666; background:#FFFFFF; padding:5px 10px; border-top:1px solid #666666; border-bottom:1px solid #666666}
+.HdText3 {font-size:11px; font-weight:bold; color:#666666; background:#FFFFFF; padding:5px 10px; border-bottom:1px solid #666666}
+
+.HdText2 a { color:#FF6600; text-decoration:none;}
+.SafHdText1 {font-size:11px; color:#666666; background:#FFFFFF; padding:5px 10px; }
+.SafHdText3 {font-size:11px; font-weight:bold; color:#666666; background:#FFFFFF; padding:5px 10px; border-top:1px solid #FF6600; border-bottom:1px solid #FF6600}
+.tbltd {font-size:11px; color:#666666; background:#FFFFFF; padding:5px 10px; border-bottom:1px solid #EFEFEF;}
+.redlink { color:#FF0000; }
+.saffronlink { color:#FF6600; }
+.maroonlink { color:#990000; }
+.MarHdText3 {font-size:11px; font-weight:bold; color:#990000; background:#FFFFFF; padding:5px 10px; border-top:1px solid #FF6600; border-bottom:1px solid #FF6600}
+.BlueHdText3 {font-size:11px; font-weight:bold; color:#000066; background:#FFFFFF; padding:5px 10px; border-top:1px solid #FF6600; border-bottom:1px solid #FF6600}
+
+.bluelink { color:#000066; }
+.mrtbltd {font-size:11px; color:#990000; background:#FFFFFF; padding:5px 10px; border-bottom:1px solid #EFEFEF;}
+.bltbltd {font-size:11px; color:#000066; background:#FFFFFF; padding:5px 10px; border-bottom:1px solid #EFEFEF;}
+
+
+.Footer {background:#666666; color:#E9E9E9; padding:0 20px; height:30px}
+.questiontext { font:Arial, Helvetica, sans-serif; font-size:14px; font-weight:bold; }
+input, select, textarea {font-family:Verdana; font-size:10px; color:#666666}

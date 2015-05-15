@@ -1,0 +1,9 @@
+<?php
+	session_start();
+	$_SESSION['Username']='';
+	$_SESSION['Password']='';
+	$_SESSION['languageid']='';
+	session_destroy();
+	header("location:index.php");
+	exit;
+?>
